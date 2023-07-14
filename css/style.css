@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Raleway', sans-serif;
+
+  background-color: #F2F3F8;
+}
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: #fff;
+  padding: 20px;
+  overflow-y: auto;
+  z-index: 999;
+}
+.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  margin-bottom: 10px;
+}
+.menu a {
+  font-size: 20px;
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #333;
+}
+.menu a:hover {
+  background-color: #00004E;
+  color: #fff;
+}
+
+.logo img{
+  width: 200px;
+}
+----------------------------------
+.filtrimi{
+  padding-top: 50px;
+
+}
+.container {
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 50px 0 0 35%;
+}
+
+.search-bar input[type="text"],
+.filter-bar select {
+  outline: none;
+  border: 1px solid #699BF7;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.gender-selection select {
+  outline: none;
+  border: 1px solid #699BF7;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 18px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background-size: 20px;
+
+}
+
+.gender-selection select:focus {
+  border-color: #699BF7;
+}
+
+
+.search-bar button,
+.filter-bar button {
+  padding: 10px 15px;
+  font-size: 16px;
+  background-color: #00004E;
+  border-radius: 10px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+  }
+
+  .search-bar input[type="text"],
+  .filter-bar select,
+  .search-bar button,
+  .filter-bar button {
+    width: 100%;
+  }
+}
+
+
+.content {
+    border-radius: 10px;
+    background-color: #00004E;
+    color: white;
+    text-align: center;
+    padding: 40px;
+    margin-left: 7%;
+    margin-top: 200px;
+    margin-bottom: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 1500px;
+    min-height: 600px;
+    overflow: visible; /* Added overflow property */
+  z-index: 1; /* Added z-index to keep it above the links */
+  border-top-left-radius: 0px;
+ 
+  
+}
+
+
+.top-left-links {
+  color: #000;
+  position: absolute;
+  top: -39px;
+  left: 0px;
+  display: flex;
+  z-index: 2;
+ 
+}
+
+#non-active{
+  color: #000;
+}
+
+.contente .top-left-links #non-active a:hover{
+  color: #fff;
+}
+
+.top-left-links a {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  text-decoration: none;
+  padding: 10px 1px;
+  transition: background-color 0.3s;
+  color: #fff;
+  width: 200px;
+}
+
+.top-left-links a:not(:last-child) {
+  margin-right: 20px;
+}
+
+.top-left-links a.active {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color:#00004E;
+  color: white;
+
+}
+.top-left-links a.active:hover {
+  background-color:#00004E ;
+  color: white;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+
+}
+.top-left-links a#non-active:hover {
+  background-color:#00004E ;
+  color: white;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+
+}
+
+
+.top-left-links a:hover {
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  background-color: #00004E;
+  color: #fff;
+}
+
+/* /* CARDS CSS - USERS INFO  */
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align items horizontally with space between */
+  background-color: #F5F5F5;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px; /* Add margin to create spacing between cards */
+}
+.card .profile-image {
+  width: 120px;
+  height: 120px;
+  border-radius: 10%;
+  background-color: grey;
+  margin-right: 20px;
+}
+
+.card .user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.card .user-info .name {
+  color: #00004E;
+  margin: 0 0 5px 0;
+  font-size: 24px;
+}
+
+.card .user-info .detail {
+  color: #00004E;
+
+  margin: 0;
+  font-size: 16px;
+}
+
+.card .button {
+  background-color: #007bff;
+  color: #fff;
+  margin-right: 30px;
+  padding: 15px 26px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
+/* /* CARDS CSS - USERS INFO  */
+
+.pagination {
+  margin-left: 250px;
+  margin-top: 70.5%;
+  padding-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.pagination a {
+  padding: 15px 25px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #000;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.pagination a.active {
+  background-color: #00004E;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {
+  background-color: #f1f1f1;
+}
+
+.previous,
+.next {
+  background-color: #f1f1f1;
+}
+
+@media screen and (max-width: 600px) {
+  .pagination {
+    flex-wrap: wrap;
+  }
+} 
