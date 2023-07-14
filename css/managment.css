@@ -52,6 +52,7 @@ body{
 
 }
 .container {
+  margin-right: 260px;
   padding-top: 50px;
   display: flex;
   flex-wrap: wrap;
